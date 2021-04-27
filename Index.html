@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            color: black;
+            font-family: sans-serif;
+        }
+
+        #grid-container {
+                max-width: 960px;            
+                margin: 0 auto;
+
+                display: grid;
+                grid-gap: 8px;
+
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "container"
+                    "paragraph-text";
+            }  
+
+
+        header {
+            margin: 10px 20px;
+            grid-area: header;             
+        }   
+
+        h1 {
+            font-weight: normal;
+            margin: 0;
+        }  
+
+        .container {                              
+               grid-area: container;
+            }
+
+
+        .row {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;             
+            }
+
+         .column {
+                flex-basis: 20%;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+
+         
+        .tile {
+                border: 1px solid #3285ac;
+                background-color: #3285ac;
+                border-radius: 8px;           
+                overflow: hidden;
+        }              
+
+        .tile-background {
+                height: 90px;                
+                background-image: url(placeholder-image.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size:cover;           
+            }
+
+        .tile-text {
+                padding: 8px 0px;                
+                background: white;
+                text-align: center;
+                text-overflow: ellipsis;                                  
+            }
+
+            #paragraph-text {
+                grid-area: paragraph-text;
+                padding-left: 20px;
+            }
+       
+             
+      
+
+        @media screen and (max-width: 1024px) {
+            .column {
+                flex-basis: 20%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 33.33%;
+            }
+           
+        }
+
+        @media screen and (max-width: 414px) {
+           
+            .column {
+                flex-basis: 100%;                                                                          
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 3em;
+            }
+
+            .container {                              
+               margin:0 auto;
+            }
+            .row {
+                justify-content: center;
+            }
+            .tile-background {
+                height: 200px;
+            }   
+            .tile-text {
+                font-size: 2em;
+            }
+        }    
+    </style>
+</head>
+
+<body>
+
+    <div id="grid-container">   
+
+        <header>
+            <h1>Gallery Heading</h1>
+        </header>
+
+
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="column">                
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>              
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="tile">
+                        <div class="tile-background"></div>
+                        <div class="tile-text">Image Title</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="paragraph-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium varius varius. Duis volutpat
+                elementum neque, sed congue neque luctus ut. Nunc ligula lacus, hendrerit eget urna finibus, tristique
+                ullamcorper nulla. Pellentesque congue laoreet eros. Nunc sit amet ipsum id ex rhoncus ornare quis eu
+                mi. Morbi ac finibus odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc mattis
+                tempus tempor. Etiam at neque sed nisl ornare semper pharetra non sapien. Praesent pellentesque, ipsum a
+                fermentum fermentum, sapien dui pharetra felis, in dictum arcu urna in nibh. Aliquam pulvinar
+                pellentesque nisl, pharetra ultricies mauris auctor vel. Aliquam erat volutpat. Vestibulum suscipit ut
+                ligula finibus semper. In hac habitasse platea dictumst. Fusce ante nisi, auctor vel fermentum sed,
+            tincidunt non ex.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
